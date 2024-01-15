@@ -7,7 +7,7 @@ class Movie{
     public $genre;
     public $length;
     public $rating;
-    public $recommend
+    public $recommend;
 
       function __construct(
         $_name,
@@ -29,6 +29,8 @@ class Movie{
     public function doRec($_rating)
     {
         if($_rating >= 4){
+            
+            return $this->recommend;
 
             $_recommend = true; 
         }
