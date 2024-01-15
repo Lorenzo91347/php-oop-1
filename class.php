@@ -7,13 +7,15 @@ class Movie{
     public $genre;
     public $length;
     public $rating;
+    public $recommend
 
-    function __construct(
+      function __construct(
         $_name,
         $_year,
         $_genre,
         $_length,
-        $_rating
+        $_rating,
+        $_recommend = false,
     ){
      
         $this->name = $_name;
@@ -21,13 +23,14 @@ class Movie{
         $this->genre = $_genre;
         $this->length = $_length;
         $this->rating = $_rating;
+        $this->recommend = $_recommend;
     }
 
     public function doRec($_rating)
     {
         if($_rating >= 4){
-            
 
+            $_recommend = true; 
         }
     }
 }
