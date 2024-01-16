@@ -1,4 +1,6 @@
 <?php
+include_once __DIR__.'/info/ratings.php';
+
 
 class Movie{
 
@@ -6,33 +8,35 @@ class Movie{
     public $year;
     public $genre;
     public $length;
-    public $rating;
-    public $recommend;
+    public $vote;
+
 
       function __construct(
         $_name,
         $_year,
         $_genre,
         $_length,
-        $_rating,
-        $_recommend = false,
+        $_vote
+    
+        
+
     ){
-     
+        
         $this->name = $_name;
         $this->year = $_year;
         $this->genre = $_genre;
         $this->length = $_length;
-        $this->rating = $_rating;
-        $this->recommend = $_recommend;
+        $this->vote = $_vote;
+    
     }
-
-    public function doRec($_rating)
-    {
-        if($_rating >= 4){
-            
-            return $this->recommend;
-
-            $_recommend = true; 
-        }
+    public function getVote(){
+        return $this-> vote;
     }
+    
+
+   
+
+    
+
+    
 }

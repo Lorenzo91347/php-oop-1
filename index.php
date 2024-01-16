@@ -1,8 +1,8 @@
 <?php
 
-require_once __DIR__.'/class.php';
+require_once __DIR__.'/info/models/class.php';
 
-$movie1 = new Movie('movie1','1991','action','130','4','');
+$movie1 = new Movie('movie1','1991','action','130',$vote->getVote(),'');
 $movie2 = new Movie('movie2','1998','adventure','95','2','');
 $movie3 = new Movie('movie3','2014','romance','160','5','');
 
